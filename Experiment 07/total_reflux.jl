@@ -79,6 +79,7 @@ while true
             # 迭代后新点
             point_1 = point_2
             point_2 = zeros(2)
+            println(point_1[1])
             break
         end
     end

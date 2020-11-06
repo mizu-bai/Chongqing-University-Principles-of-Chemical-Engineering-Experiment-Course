@@ -41,4 +41,3 @@
 * Julia Version: 1.4.2 (2020-05-23), Official https://julialang.org/ Release
 * Atom Verson: 1.52.0 x64
 * Juno Version: 0.8.3
-
