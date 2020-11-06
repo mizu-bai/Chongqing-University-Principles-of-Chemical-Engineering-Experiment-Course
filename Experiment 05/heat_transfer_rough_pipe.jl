@@ -23,7 +23,7 @@ T_1    冷空气进口处蒸汽的温度  C
 T_1    冷空气出口处蒸汽的温度  C
 """
 
-source_file_name = "data_of_rough pipe.csv"
+source_file_name = "data_of_rough_pipe.csv"
 source_data = CSV.read(source_file_name)
 
 ## 温度计算
@@ -111,5 +111,5 @@ result = DataFrame(
     :Re => Re,
     :Pr => Pr,
 )
-target_file_name = "resul_of_rough_pipe.csv"
+target_file_name = "result_of_rough_pipe.csv"
 CSV.write(target_file_name, result)
