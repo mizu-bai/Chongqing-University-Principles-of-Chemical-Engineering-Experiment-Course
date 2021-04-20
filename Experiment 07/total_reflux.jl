@@ -3,6 +3,7 @@ using CSV
 using Interpolations
 using PyCall
 using PyPlot
+using DataFrames
 
 ## 调 python 包
 @pyimport numpy as np
@@ -30,7 +31,7 @@ x = y = np.linspace(0, 1, 1000)
 
 ## 平衡线
 # EtOH-H2O 相平衡数据
-EtOH = CSV.read("EtOH-H2O.csv")
+EtOH = CSV.read("EtOH-H2O.csv", DataFrame)
 # EtOH-H2O 相平衡组成插值
 interp_y = Interpolations.LinearInterpolation(EtOH.x, EtOH.y)
 ## 相平衡线

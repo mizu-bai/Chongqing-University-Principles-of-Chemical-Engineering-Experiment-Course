@@ -24,7 +24,7 @@ T_1    冷空气出口处蒸汽的温度  C
 """
 
 source_file_name = "data_of_smooth_pipe.csv"
-source_data = CSV.read(source_file_name)
+source_data = CSV.read(source_file_name, DataFrame)
 
 ## 温度计算
 # 换热器壳程蒸汽的温度
@@ -48,12 +48,12 @@ d = (21 - 2.5 * 2) * 1e-3
 l = 1000e-3
 # 流速 m / s
 u = @. source_data.q_v / (π / 4 * d ^ 2 * 3600)
-# 表面积 m * s ^ (-1)
+# 表面积 m ^ 2 
 A = π * d * l
 
 ## 气体物性计算
 # 空气数据
-air = CSV.read("air.csv")
+air = CSV.read("air.csv", DataFrame)
 # 密度插值
 interp_ρ = Interpolations.LinearInterpolation(air.t, air.rho)
 # 空气密度 kg * m ^ (-3)
